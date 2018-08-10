@@ -8,10 +8,10 @@ const hbs = require('nodemailer-express-handlebars');
 var app = express();
 // instantiate client using your DB configurations
 const client = new Client({
-  database: 'd4iel262amjf4o',
-  user: 'vzimbgfrectaxb',
-  password: 'd14fdcd7c495de49d98bfcd6231900d3488a0c8cf32b718d0987c637bdb9510f',
-  host: 'ec2-23-23-216-40.compute-1.amazonaws.com',
+  database: 'dc3b5rn3r0uef4',
+  user: 'lfulspkfulfnzg',
+  password: '75fae7e3558f2afb8fb7cfb4cfcce0d4ca6162700e9dcf26b18c93bb8f141f08',
+  host: 'ec2-54-225-76-201.compute-1.amazonaws.com',
   port: 5432,
   ssl: true 
 }); 

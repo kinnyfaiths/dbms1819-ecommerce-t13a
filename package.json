@@ -15,6 +15,8 @@
   "dependencies": {
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
+    "nodemailer": "^4.6.7",
+    "nodemailer-express-handlebars": "^3.0.0",
     "pg": "^7.4.3",
     "save": "^2.3.2"
   },
