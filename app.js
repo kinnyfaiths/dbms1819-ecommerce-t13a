@@ -62,27 +62,27 @@ app.get('/', function(req, res) {
 
 
 
-// app.get('/list', function(req, res) {
+app.get('/list', function(req, res) {
 
-//   client.query('SELECT * FROM Products')
-//    .then((results)=>{
-//     res.render('list', results);
-//   })
-//   .catch((err)=>{
-//     console.log('error',err);
-//     res.send('Error!');
+  client.query('SELECT * FROM Products')
+   .then((results)=>{
+    res.render('list', results);
+  })
+  .catch((err)=>{
+    console.log('error',err);
+    res.send('Error!');
 
-//   });
-// });
+  });
+});
 
-// app.get('/', function(req,res) {
-//   res.render('list');
-// });
+app.get('/', function(req,res) {
+  res.render('list');
+});
 
 
 // START
 // POST route from contact form
-/* app.post('/contact', function (req, res) {
+ app.post('/contact', function (req, res) {
   let mailOpts, smtpTrans;
   smtpTrans = nodemailer.createTransport({
     host: 'smtp.gmail.com',
@@ -208,7 +208,7 @@ app.post('/category/create', function(req, res) {
   });
 });
 
-END */ 
+
 
 app.get('/brands', function(req, res) {
   client.query('SELECT * FROM brands')
