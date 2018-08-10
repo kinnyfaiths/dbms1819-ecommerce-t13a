@@ -48,17 +48,17 @@ app.use(bodyParser.urlencoded({extended: false}));
 //   });
 // });
 
-app.get('/about', function(req, res) {
-  res.render('about');
-});
+// app.get('/about', function(req, res) {
+//   res.render('about');
+// });
 
-app.get('/order', function(req,res) {
-  res.render('order');
-});
+// app.get('/order', function(req,res) {
+//   res.render('order');
+// });
 
-app.get('/contact', function(req,res) {
-  res.render('faq');
-});
+// app.get('/contact', function(req,res) {
+//   res.render('faq');
+// });
 
 
 
