@@ -3,6 +3,7 @@ var path = require('path');
 var { Client } = require('pg'); 
 var nodemailer = require('nodemailer');   
 var exphbs = require('express-handlebars');
+const bodyParser = require('body-parser');
 const hbs = require('nodemailer-express-handlebars');
 
 var app = express();
@@ -15,12 +16,13 @@ const client = new Client({
   port: 5432,
   ssl: true 
 }); 
+
 app.set('port', (process.env.PORT || 3000));
 
-var http = require("http");
-setInterval(function() {
-    http.get("http://dbms1819-ecommerce-t13.herokuapp.com/list");
-}, 300000); // every 5 minutes (300000)
+// var http = require("http");
+// setInterval(function() {
+//     http.get("http://dbms1819-ecommerce-t13.herokuapp.com/list");
+// }, 300000); // every 5 minutes (300000)
 
 // connect to database
 client.connect()
@@ -37,6 +39,8 @@ app.use(express.static(path.join(__dirname, 'views')));
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars'); 
 
+
+app.use(bodyParser.urlencoded({extended: false}));
 // app.get('/', function(req, res) {
 //   res.render('home1', {
 //     content:'Joanne C. Patoc',
@@ -70,8 +74,7 @@ app.get('/list', function(req, res) {
 
   });
 });
-const bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded({extended: true}));
+
 
 // POST route from contact form
 app.post('/contact', function (req, res) {
