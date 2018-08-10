@@ -75,9 +75,9 @@ app.get('/contact', function(req,res) {
 //   });
 // });
 
-app.get('/', function(req,res) {
-  res.render('list');
-});
+// app.get('/', function(req,res) {
+//   res.render('list');
+// });
 
 
 // START
@@ -227,14 +227,14 @@ app.get('/brands/create', function(req, res) {
 });
  
 
-app.post('/brands/create', function(req, res) {
-  console.log('req.body', req.body);
-  client.query("Insert into brands (brandsname, brandsdescription) VALUES ('"+req.body.name+"','"+req.body.description+"')", 
-  (req, data)=> {
-  console.log(req, data)
-    res.redirect('/brands')
-  });
-});
+// app.post('/brands/create', function(req, res) {
+//   console.log('req.body', req.body);
+//   client.query("Insert into brands (brandsname, brandsdescription) VALUES ('"+req.body.name+"','"+req.body.description+"')", 
+//   (req, data)=> {
+//   console.log(req, data)
+//     res.redirect('/brands')
+//   });
+// });
 
 
 
