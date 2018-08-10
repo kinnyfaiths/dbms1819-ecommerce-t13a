@@ -37,12 +37,12 @@ app.use(express.static(path.join(__dirname, 'views')));
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars'); 
 
-app.get('/', function(req, res) {
-  res.render('home1', {
-    content:'Joanne C. Patoc',
-    published: false
-  });
-});
+// app.get('/', function(req, res) {
+//   res.render('home1', {
+//     content:'Joanne C. Patoc',
+//     published: false
+//   });
+// });
 
 app.get('/about', function(req, res) {
   res.render('about');
