@@ -17,5 +17,10 @@
     "express-handlebars": "^3.0.0",
     "pg": "^7.4.3",
     "save": "^2.3.2"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/dbms1819-ecommerce-t13a/repository/issues"
+  },
+  "homepage": "https://github.com/dbms1819-ecommerce-t13a/repository#readme",
+  "devDependencies": {}
 }
