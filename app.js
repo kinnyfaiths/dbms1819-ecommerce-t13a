@@ -35,7 +35,7 @@ client.connect()
 var app = express();
 /*const app = express();*/
 // tell express which folder is a static/public folder
-// app.use(express.static(path.join(__dirname, 'views')));
+app.use(express.public(path.join(__dirname, 'views')));
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars'); 
 
