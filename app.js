@@ -62,18 +62,23 @@ app.get('/contact', function(req,res) {
 
 
 
-app.get('/list', function(req, res) {
+// app.get('/list', function(req, res) {
 
-  client.query('SELECT * FROM Products')
-   .then((results)=>{
-    res.render('list', results);
-  })
-  .catch((err)=>{
-    console.log('error',err);
-    res.send('Error!');
+//   client.query('SELECT * FROM Products')
+//    .then((results)=>{
+//     res.render('list', results);
+//   })
+//   .catch((err)=>{
+//     console.log('error',err);
+//     res.send('Error!');
 
-  });
+//   });
+// });
+
+app.get('/', function(req,res) {
+  res.render('list');
 });
+
 
 
 // POST route from contact form
