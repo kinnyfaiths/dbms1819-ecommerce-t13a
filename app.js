@@ -9,10 +9,10 @@ const hbs = require('nodemailer-express-handlebars');
 var app = express();
 // instantiate client using your DB configurations
 const client = new Client({
-  database: 'dc3b5rn3r0uef4',
-  user: 'lfulspkfulfnzg',
-  password: '75fae7e3558f2afb8fb7cfb4cfcce0d4ca6162700e9dcf26b18c93bb8f141f08',
-  host: 'ec2-54-225-76-201.compute-1.amazonaws.com',
+  database: 'd81j256p42t9pv',
+  user: 'fvcvkoclyridsp',
+  password: '6f1d387b5eb6208ce7b25139bfead2618fe1007c5ebd9dc779ce0217a00e10a6',
+  host: 'ec2-54-227-241-179.compute-1.amazonaws.com',
   port: 5432,
   ssl: true 
 }); 
@@ -80,9 +80,9 @@ app.get('/', function(req,res) {
 });
 
 
-
+// START
 // POST route from contact form
-app.post('/contact', function (req, res) {
+/* app.post('/contact', function (req, res) {
   let mailOpts, smtpTrans;
   smtpTrans = nodemailer.createTransport({
     host: 'smtp.gmail.com',
@@ -208,6 +208,8 @@ app.post('/category/create', function(req, res) {
   });
 });
 
+END */ 
+
 app.get('/brands', function(req, res) {
   client.query('SELECT * FROM brands')
   .then((results)=>{
@@ -236,7 +238,7 @@ app.post('/brands/create', function(req, res) {
 
 
 
-app.get('/products', function(req, res) {
+/* app.get('/products', function(req, res) {
 
   client.query('SELECT * FROM albums')
   .then((results)=>{
@@ -280,7 +282,8 @@ app.post('/order', function (req, res) {
       res.render('contact-success');
     }
   });
-});
+}); */
+
 
 app.listen(app.get('port'), function(){
   console.log('Server started on port' + app.get('port'))
