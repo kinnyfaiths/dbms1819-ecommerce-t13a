@@ -41,12 +41,12 @@ app.set('view engine', 'handlebars');
 
 
 app.use(bodyParser.urlencoded({extended: false}));
-// app.get('/', function(req, res) {
-//   res.render('home1', {
-//     content:'Joanne C. Patoc',
-//     published: false
-//   });
-// });
+app.get('/', function(req, res) {
+  res.render('home1', {
+    content:'Joanne C. Patoc',
+    published: false
+  });
+});
 
 // app.get('/about', function(req, res) {
 //   res.render('about');
