@@ -1,6 +1,6 @@
 var express = require('express');
 var path = require('path');
-{Client} = require('pg'); 
+var {Client} = require('pg'); 
 var nodemailer = require('nodemailer');   
 var exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
@@ -8,7 +8,7 @@ const hbs = require('nodemailer-express-handlebars');
 
 // instantiate client using your DB configurations
 
-client = new Client({
+var client = new Client({
   database: 'd81j256p42t9pv',
   user: 'fvcvkoclyridsp',
   password: '6f1d387b5eb6208ce7b25139bfead2618fe1007c5ebd9dc779ce0217a00e10a6',
@@ -17,7 +17,6 @@ client = new Client({
   ssl: true 
 }); 
 
-app.set('port', (process.env.PORT || 3000));
 
 // var http = require("http");
 // setInterval(function() {
@@ -285,7 +284,5 @@ app.post('/order', function (req, res) {
   });
 }); */
 
-
-app.listen(app.get('port'), function(){
-  console.log('Server started on port' + app.get('port'))
-});
+app.listen(process.env.PORT||8000);
+console.log('Server started on port 8000')
