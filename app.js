@@ -1,14 +1,14 @@
 var express = require('express');
 var path = require('path');
-var { Client } = require('pg'); 
+{Client} = require('pg'); 
 var nodemailer = require('nodemailer');   
 var exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
 const hbs = require('nodemailer-express-handlebars');
 
-var app = express();
 // instantiate client using your DB configurations
-const client = new Client({
+
+client = new Client({
   database: 'd81j256p42t9pv',
   user: 'fvcvkoclyridsp',
   password: '6f1d387b5eb6208ce7b25139bfead2618fe1007c5ebd9dc779ce0217a00e10a6',
@@ -33,6 +33,7 @@ client.connect()
     console.log('cannot connect to database!')
   }); 
 
+var app = express();
 /*const app = express();*/
 // tell express which folder is a static/public folder
 app.use(express.static(path.join(__dirname, 'views')));
